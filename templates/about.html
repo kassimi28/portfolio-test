@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/common.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img class="logo" src="{{ url_for('static', filename='images/img-logo/l5.png') }}" alt="">
+        </div>
+
+        <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/selection">Selection</a></li>
+            <li><a href="/elements">Brands</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+
+        <button class="login"><a href="/login">login</a></button>
+    </header>
+
+
+    <div class="container">
+
+        <div class="title">
+            <h2>Team</h2>
+            <p>ALX Student</p>
+        </div>
+        <div class="team">
+
+            <div class="discreption">
+                <h2>KASSIMI Fatiha</h2>
+                <p>Front-end Web Developer</p>
+                I spearheaded the development of a dynamic beauty review website,
+                utilizing my expertise as a front-end developer while also contributing
+                to backend functionalities. Leveraging Flask framework alongside HTML, CSS,
+                JavaScript, and Bootstrap, I crafted an engaging user interface enriched with
+                seamless navigation and visually appealing design elements. My responsibilities
+                encompassed both the frontend presentation layer and the backend logic, ensuring
+                smooth interaction and optimal performance across the platform. Through meticulous
+                attention to detail and innovative problem-solving, I successfully integrated
+                frontend and backend components, resulting in a cohesive and feature-rich
+                website that delivers an immersive beauty review experience for users.
+                <div class="icons">
+                    <i class='bx bxl-html5'></i>
+                    <i class='bx bxl-css3'></i>
+                    <i class='bx bxl-javascript'></i>
+                    <i class='bx bxl-bootstrap'></i>
+                    <i class='bx bxl-flask'></i>
+                </div>
+            </div>
+
+            <img class="team-pic" src="{{ url_for('static', filename='images/svg/team.svg') }}" alt="">
+            <div class="account">
+                <a href="https://twitter.com/kassimi_fa26154"><i class='bx bxl-twitter'></i></a>
+                <a href="https://github.com/Tihaelka"><i class='bx bxl-github'></i></a>
+                <a href="https://www.linkedin.com/in/fatiha-kassimi/"><i class='bx bxl-linkedin-square'></i></a>
+            </div>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <img class="logo" src="{{ url_for('static', filename='images/img-logo/l5.png') }}" alt="">
+
+        <p>Copyright&copy;Alxstudent2024</p>
+
+        <div class="footer-icons">
+            <i class='bx bxl-instagram'></i>
+            <i class='bx bxl-pinterest-alt'></i>
+            <i class='bx bxl-facebook-circle'></i>
+            <i class='bx bxl-tiktok'></i>
+        </div>
+
+    </footer>
+    <script src="{{ url_for('static', filename='js/scroll.js') }}"></script>
+</body>
+
+</html>

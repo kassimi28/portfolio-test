@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Sedan", serif;
+}
+
+.sedan-regular {
+    font-family: "Sedan", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    width: 100%;
+    height: 150vh;
+}
+
+.container-brand {
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    height: auto;
+}
+
+section {
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.products {
+    width: 300px;
+    height: 300px;
+}
+
+.landing {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.brand-disc {
+    margin-left: 40px;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 50%;
+    }
+}
+
+.brand-disc {
+    overflow: hidden;
+    border-right: .10em solid #e4acc4ec;
+    white-space: nowrap;
+    animation: typing 4s steps(30, end);
+}
+
+
+h3 {
+    font-size: 25px;
+    color: #e4acc4ec;
+    margin-bottom: 20px;
+}
+
+h3:hover {
+    font-size: 30px;
+    letter-spacing: 4px;
+    transition: 0.5s ease-in-out;
+}
+
+ul li a,
+ul li {
+    text-decoration: none;
+    list-style: none;
+    color: #000;
+    font-weight: bold;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+
+/*Prodcuct card css*/
+.container {
+    width: 100%;
+    position: absolute;
+    top: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product-img {
+    width: 400px;
+    height: 400px;
+}
+
+.disc {
+    width: 400px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding-bottom: 20px;
+}
+
+.short-disc {
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.disc {
+    text-align: justify;
+    letter-spacing: 2px;
+    line-height: 20px;
+}
+
+/*Responsive design*/
+
+/* Mobile with max-width 400px*/
+
+@media screen and (max-width:400px) {
+    body {
+        max-width: 400px;
+        height: 200vh;
+    }
+
+    .container {
+        max-width: 400px;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .product-img {
+        height: fit-content;
+        width: 100%;
+    }
+
+    .card {
+        max-width: 400px;
+        height: 100%;
+    }
+
+    .disc {
+        max-width: 350px;
+        height: max-content;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        max-width: 400px;
+        height: 200vh;
+    }
+
+    .container-brand {
+        max-width: 400px;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .landing {
+        max-width: 400px;
+        height: max-content;
+    }
+
+    .brand-disc {
+        max-width: 300px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+
+        to {
+            width: 50%;
+        }
+    }
+
+    section {
+        max-width: 400px;
+        height: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-left: 10px;
+    }
+}

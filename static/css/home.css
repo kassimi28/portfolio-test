@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Sedan", serif;
+}
+
+.sedan-regular {
+    font-family: "Sedan", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    width: 100%;
+    height: 260vh;
+}
+
+.content {
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 400px;
+    border-radius: 8px;
+    border: 1px solid #DDD;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+.card h5 {
+    font-size: 40px;
+}
+
+.card img {
+    width: 300px;
+}
+
+.btn,
+.btn a {
+    width: 100px;
+    height: 40px;
+    border-radius: 8px;
+    background-color: #111;
+    border: 1px solid #000;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+}
+
+.card .card-icon {
+    font-size: 30px;
+}
+
+.card .card-icon i:hover {
+    font-size: 35px;
+    transition: 0.5s ease-in-out;
+}
+
+.section-title,
+.last-reviews,
+.categories {
+    font-size: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.section-title::after,
+.last-reviews::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 1000px;
+    border-bottom: 1px solid #DDD;
+    margin-left: 10px;
+}
+
+.categories::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    width: 830px;
+    border-bottom: 1px solid #DDD;
+    margin-left: 10px;
+}
+
+section {
+    width: 300px;
+    height: 350px;
+    border: 1px solid #DDD;
+    border-radius: 8px;
+    margin-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+#img1,
+#img2 {
+    width: 150px;
+    height: 150px;
+}
+
+.new-products,
+.section-review {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.icon-review button {
+    width: 40px;
+    height: 40px;
+}
+
+.review-second {
+    margin-bottom: 100px;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 400px) {
+    body {
+        max-width: 400px;
+        max-height: 300vh;
+    }
+
+    .content {
+        max-width: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        max-width: 300px;
+    }
+
+    .card img {
+        max-width: 70%;
+    }
+
+    .section-title,
+    .last-reviews {
+        font-size: 40px;
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .section-title::after,
+    .last-reviews::after {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        width: 300px;
+        border-bottom: 1px solid #DDD;
+    }
+
+    #new,
+    #review {
+        max-width: 400px;
+        height: 380px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .section-review,
+    .new-products {
+        max-width: 400px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .section-review {
+        padding-bottom: 200px;
+    }
+
+}
+
+.new-products #disc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

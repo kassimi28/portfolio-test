@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/common.css') }}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Beauty Review</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img class="logo" src="{{ url_for('static', filename='images/img-logo/l5.png') }}" alt="">
+        </div>
+
+        <ul class="nav-list">
+            <li><a href="/">Home</a></li>
+            <li><a href="/selection">Selection</a></li>
+            <li><a href="/elements">Brands</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+
+        <button class="login"><a href="/login">login</a></button>
+    </header>
+
+    <div class="main">
+        <div class="main-content">
+            <h2>Beauty Review</h2> Your Ultimate Destination for Honest Reviews and Thorough Testing
+            <br>
+            <span> Welcome to BeautyReview, where beauty enthusiasts and consumers alike
+                gather to discover the latest products. At BeautyReview, we are dedicated to
+                providing high-quality services tailored to meet your beauty needs.We provide
+                high-quality services related to what you need.</span>
+        </div>
+        <img class="main-img" src="{{ url_for('static', filename='images/svg/makeup.svg') }}" alt="">
+    </div>
+
+    <div class="values">
+        <div class="discover">
+            <img class="img-1" src="{{ url_for('static', filename='images/svg/discover.svg') }}" alt="">
+            <h3>Discover</h3>
+            <p>Explore the latest beauty products added to our platform</p>
+        </div>
+        <div class="test-p">
+            <img class="img-1" src="{{ url_for('static', filename='images/svg/test.svg') }}" alt="">
+            <h3>Test</h3>
+            <p>Become a beauty product tester! Sign up for the chance to receive free samples and participate in our
+                product testing programs</p>
+        </div>
+        <div class="browse">
+            <img class="img-1" src="{{ url_for('static', filename='images/svg/browse.svg') }}" alt="">
+            <h3>Browse Beauty</h3>
+            <p>Get beauty tips from experts! Browse our articles, guides, and tutorials to discover the latest trends
+            </p>
+        </div>
+    </div>
+    <div class="services">
+        <img class="services-img" src="{{ url_for('static', filename='images/svg/services.svg') }}" alt="">
+        <div class="service-home">
+            <h1>Embark on a Journey to Excellence</h1>
+            <div class="discr-1">
+                Discover our meticulously curated collection of top-rated beauty reviews, carefully crafted to surpass
+                your expectations. Uncover the most highly recommended options, guided by unmatched expertise and
+                unwavering dedication.
+            </div>
+            <button class="selection"><a href="/selection">Services</a></button>
+        </div>
+    </div>
+
+    <footer id="footer">
+        <img class="logo" src="{{ url_for('static', filename='images/img-logo/l5.png') }}" alt="">
+
+        <p>Copyright&copy;Alxstudent2024</p>
+
+        <div class="footer-icons">
+            <i class='bx bxl-instagram'></i>
+            <i class='bx bxl-pinterest-alt'></i>
+            <i class='bx bxl-facebook-circle'></i>
+            <i class='bx bxl-tiktok'></i>
+        </div>
+
+    </footer>
+    <script src="{{ url_for('static', filename='js/scroll.js') }}"></script>
+</body>
+
+</html>

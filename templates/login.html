@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/common.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+    <title>Login</title>
+</head>
+
+<body>
+    <div id="header-container">
+        {% include 'header.html' %}
+    </div>
+    <div class="container">
+        <div class="signin-signup">
+            <form method="post" class="sign-in-form">
+                <h2 class="title">Sign in</h2>
+                <div class="input-field">
+                    <i class='bx bx-user'></i>
+                    <input type="text" placeholder="Username"  id="username" name="username">
+                </div>
+                <div class="input-field">
+                    <i class='bx bx-lock-alt'></i>
+                    <input type="password" placeholder="Password" id="password" name="password">
+                </div>
+                <input type="submit" value="Login" class="btn">
+                <p class="social-text">Or Sign in with social platform</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                        <i class='bx bxl-facebook-circle'></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class='bx bxl-meta'></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class='bx bxl-google'></i>
+                    </a>
+                </div>
+                <p class="account-text">Don't have an account? <a href="#" id="sign-up-btn2">Sign up</a></p>
+            </form>
+            <form action="" class="sign-up-form">
+                <h2 class="title">Sign up</h2>
+                <div class="input-field">
+                    <i class='bx bx-user'></i>
+                    <input type="text" placeholder="Username">
+                </div>
+                <div class="input-field">
+                    <i class='bx bx-envelope'></i>
+                    <input type="text" placeholder="Email">
+                </div>
+                <div class="input-field">
+                    <i class='bx bx-lock-alt'></i>
+                    <input type="password" placeholder="Password">
+                </div>
+                <input type="submit" value="Sign up" class="btn">
+                <p class="social-text">Or Sign in with social platform</p>
+                <div class="social-media">
+                    <a href="#" class="social-icon">
+                        <i class='bx bxl-facebook-circle'></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class='bx bxl-meta'></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                    <a href="" class="social-icon">
+                        <i class='bx bxl-google'></i>
+                    </a>
+                </div>
+                <p class="account-text">Already have an account? <a href="#" id="sign-in-btn2">Sign in</a></p>
+            </form>
+        </div>
+        {% if error %}
+            <p style="color: red;">{{ error }}</p>
+        {% endif %}
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Beauty Review Member</h3>
+                    <p>Welcome in your incredible plateforme of reviews</p>
+                    <button class="btn" id="sign-in-btn">Sign in</button>
+                </div>
+                <img src="{{ url_for('static', filename='images/svg/signin.svg') }}" alt="" class="image">
+            </div>
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>New to Join?</h3>
+                    <p>Highly welcome! Pleased to have you</p>
+                    <button class="btn" id="sign-up-btn">Sign up</button>
+                </div>
+                <img src="{{ url_for('static', filename='images/svg/signup.svg') }}" alt="" class="image">
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-container">
+        {% include 'footer.html' %}
+    </div>
+    <script src="{{ url_for('static', filename='js/scroll.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/about.js') }}"></script>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product-page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/elements.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/common.css') }}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
+    </style>
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+
+</head>
+
+<body>
+    <div id="header-container">
+        {% include 'header.html' %}
+    </div>
+    <div class="container">
+        <img class="product-img" src="{{ product.image_link }}" alt="">
+        <div class="card">
+            <h2 class="title">{{ product.name }}</h2>
+            <p class="short-disc">Short Discreption</p>
+            <div class="disc">{{ product.description }}</div>
+        </div>
+    </div>
+   
+    <div id="footer-container">
+        {% include 'footer.html' %}
+    </div>
+
+    <script src="{{ url_for('static', filename='js/scroll.js') }}"></script>
+
+</body>
+
+</html>

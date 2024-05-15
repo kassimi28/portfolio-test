@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Sedan", serif;
+}
+
+.sedan-regular {
+    font-family: "Sedan", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    width: 100%;
+    height: 250vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+
+    width: 78%;
+    height: 880px;
+    border: 1px dotted #ddd;
+    border-radius: 8px;
+}
+
+.team-ing {
+    height: 200px;
+    position: relative;
+    left: 500px;
+}
+
+.title {
+    position: relative;
+    left: 40px;
+    top: 40px;
+}
+
+@keyframes color {
+    0% {
+        color: black;
+        letter-spacing: 5px;
+        font-size: 20px;
+    }
+
+    50% {
+        color: pink;
+        /*transform: rotate(45deg);*/
+    }
+
+    100% {
+        color: lightblue;
+    }
+}
+
+.title {
+    animation: color 5s infinite;
+}
+
+.discreption {
+    width: 800px;
+    height: 400px;
+    text-align: justify;
+    position: relative;
+    left: 100px;
+    top: 60px;
+    line-height: 30px;
+}
+
+.discreption h2,
+.discreption p {
+    text-align: center;
+}
+
+.icons i {
+    font-size: 40px;
+    position: relative;
+    left: 200px;
+    margin: 20px;
+}
+
+.icons i:hover {
+    font-size: 50px;
+    transition: 0.5s ease-in-out;
+}
+
+.account {
+    position: relative;
+    margin-left: 35%;
+    top: 80px;
+    left: 40px;
+    font-size: 40px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+}
+
+.account i:hover {
+    font-size: 50px;
+    transition: 0.5s ease-in-out;
+}
+
+.team-pic {
+    height: 300px;
+    margin-left: 200px;
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        max-width: 400px;
+        height: 200vh;
+    }
+
+    .container {
+        max-width: 400px;
+        height: 100%;
+        border: none;
+    }
+
+    .title {
+        display: none;
+    }
+
+    .team {
+        max-width: 400px;
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .team-pic {
+        display: none;
+    }
+
+    .account {
+        max-width: 400px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .discreption {
+        max-width: 400px;
+        height: 800px;
+        margin-top: 150px;
+        font-size: 16px;
+        text-align: center;
+        position: relative;
+        left: 0px;
+        top: 60px;
+        line-height: 30px;
+        overflow: hidden;
+    }
+
+    .icons,
+    .account {
+        display: none;
+    }
+}

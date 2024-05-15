@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elements</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/elements.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/common.css') }}">
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+</head>
+
+<body>
+
+    <div id="header-container">
+        {% include 'header.html' %}
+    </div>
+
+    <div class="container-brand">
+        <div class="landing">
+            <h2 class="header">All Cosmetic Brands</h2>
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js">
+
+            </script>
+            <lottie-player src="https://lottie.host/5c16fecf-3726-48fe-9bbf-f2f435900dd9/nyGhy1s63i.json"
+                background="#FFFFFF" speed="1" style="width: 300px; height: 300px" loop autoplay direction="1"
+                mode="normal"></lottie-player>
+        </div>
+        <p class="brand-disc">Here are the brands referenced in our unique database regrouping products
+            of which are still marketed !</p>
+        <section>
+            <div class="hair-care">
+                <ul>
+                    <li><a href="#">A good clean</a></li>
+                    <li><a href="#">Lab on fire</a></li>
+                    <li><a href="#">Alpecin</a></li>
+                    <li><a href="#">Ardes</a></li>
+                    <li><a href="#">Alpha-H</a></li>
+                </ul>
+            </div>
+            <div class="body-care">
+                <ul>
+                    <li><a href="#">Aromaker</a></li>
+                    <li><a href="#">Ame & sens</a></li>
+                    <li><a href="#">Aromatica</a></li>
+                    <li><a href="#">Adopt</a></li>
+                    <li><a href="#">Aé Bio</a></li>
+                </ul>
+            </div>
+            <div class="baby">
+                <ul>
+                    <li><a href="#">B basic</a></li>
+                    <li><a href="#">Bencos</a></li>
+                    <li><a href="#">B.lab</a></li>
+                    <li><a href="#">Ben & Anna</a></li>
+                    <li><a href="#">BeYu</a></li>
+                </ul>
+            </div>
+            <div class="makeup">
+                <ul>
+                    <li><a href="#">Calefornia Tan</a></li>
+                    <li><a href="#">Chiazure</a></li>
+                    <li><a href="#">Caliquo</a></li>
+                    <li><a href="#">Chevalait</a></li>
+                    <li><a href="#">Cadumm</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <div id="footer-container">
+        {% include 'footer.html' %}
+    </div>
+    <script src="{{ url_for('static', filename='js/scroll.js') }}"></script>
+</body>
+
+</html>

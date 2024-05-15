@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/common.css') }}">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="{{ url_for('static', filename='js/main.js') }}" defer></script>
+    <title>Home</title>
+</head>
+
+<div>
+    <div id="header-container">
+        {% include 'header.html' %}
+    </div>
+    </div>
+    <div class="content">
+        <div class="card">
+            <h5>H-Lab</h5>
+            <p>Nutricosmetics</p>
+            <img src="{{ url_for('static', filename='images/test/card1.png') }}" alt="">
+            <h4>New Skin Pro-Collagen</h4>
+            <button class="btn"><a target="_blank"
+                    href="https://dlabparis.com/products/pro-collagene-peau-neuve?utm_source=display-beaute-test&utm_medium=display&utm_campaign=bestseller-collagene">Discover</a></button>
+            <div class="card-icon">
+                <i class='bx bxl-facebook-circle'></i>
+                <i class='bx bxl-messenger'></i>
+                <i class='bx bxl-meta'></i>
+                <i class='bx bxl-whatsapp'></i>
+                <i class='bx bxl-linkedin'></i>
+                <i class='bx bx-envelope'></i>
+            </div>
+        </div>
+
+    </div>
+
+    <h2 class="section-title">New products</h2>
+
+    <div class="new-products">
+        {% for product in products %}
+            <section id="new">
+                <img src="{{ product.image_link }}" id="img1">
+                <h2 id="title">{{ product.name }}</h2>
+                <p id="disc">{{ product.description }}</p>
+                <button class="btn"><a href="/product/{{ product.id }}">Discover</a></button>
+            </section>
+        {% endfor %}
+    </div>
+<!--     <h2 class="last-reviews">Last Reviews</h2>
+    <div class="section-review">
+        <section id="review">
+            <img src="{{ url_for('static', filename='images/test/2.jpg') }}" id="img2">
+            <h2 id="title">La provancale</h2>
+            <p id="disc">Body Cream</p>
+            <div class="icon-review">
+                <button class="btn">4.0</button>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+                <i class='bx bxs-star'></i>
+            </div>
+            <p>(80 reviews)</p>
+        </section>
+    </div> -->
+    <div id="footer-container">
+        {% include 'footer.html' %}
+    </div>
+    <script src="{{ url_for('static', filename='js/scroll.js') }}"></script>
+</body>
+
+</html>
